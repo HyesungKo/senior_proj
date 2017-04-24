@@ -18,7 +18,7 @@ export class TabsPage {
   tab1Root: any = UserProfilePage;
   tab2Root: any = EventCreatePage;
   tab3Root: any = HomePage;
-  tab3Root: any = ExplorePage;
+  //tab3Root: any = ExplorePage;
 
 
   constructor() {
