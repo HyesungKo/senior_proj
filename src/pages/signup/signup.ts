@@ -1,12 +1,13 @@
-import { 
-  NavController, 
-  LoadingController, 
+import {
+  NavController,
+  LoadingController,
   AlertController } from 'ionic-angular';
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthData } from '../../providers/auth-data';
 import { EmailValidator } from '../../validators/email';
 import { HomePage } from '../home/home';
+import { BoutiqueRequestPage } from '../boutique-request/boutique-request';
 
 @Component({
   selector: 'page-signup',
@@ -17,8 +18,8 @@ export class SignupPage {
   loading: any;
 
 
-  constructor(public nav: NavController, public authData: AuthData, 
-    public formBuilder: FormBuilder, public loadingCtrl: LoadingController, 
+  constructor(public nav: NavController, public authData: AuthData,
+    public formBuilder: FormBuilder, public loadingCtrl: LoadingController,
     public alertCtrl: AlertController) {
 
     this.signupForm = formBuilder.group({
@@ -59,5 +60,9 @@ export class SignupPage {
       this.loading = this.loadingCtrl.create();
       this.loading.present();
     }
+  }
+
+  goToBoutiqueRequest(): void {
+    this.nav.push(BoutiqueRequestPage);
   }
 }

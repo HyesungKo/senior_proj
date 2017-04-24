@@ -13,7 +13,7 @@ import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs/tabs';
 import { UserProfilePage } from '../pages/user-profile/user-profile';
-
+import { BoutiqueRequestPage } from '../pages/boutique-request/boutique-request';
 
 
 // Import providers
@@ -25,6 +25,7 @@ import { ProfileData } from '../providers/profile-data';
 import { Camera } from '@ionic-native/camera';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { EmailComposer } from '@ionic-native/email-composer';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { StatusBar } from '@ionic-native/status-bar';
     ResetPasswordPage,
     SignupPage,
     TabsPage,
-    UserProfilePage
+    UserProfilePage,
+    BoutiqueRequestPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -55,7 +57,8 @@ import { StatusBar } from '@ionic-native/status-bar';
     ResetPasswordPage,
     SignupPage,
     TabsPage,
-    UserProfilePage
+    UserProfilePage,
+    BoutiqueRequestPage
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},
@@ -64,8 +67,8 @@ import { StatusBar } from '@ionic-native/status-bar';
     ProfileData,
     Camera,
     SplashScreen,
-    StatusBar
+    StatusBar,
+    EmailComposer
   ]
 })
 export class AppModule {}
-
